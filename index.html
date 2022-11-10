@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="popup _hidden">
+        <form class="popup-content" action="#" method="GET">
+            <h2 class="popup-title">Ваш фидбек</h2>
+            <fieldset>
+                <legend class="legend">Как часто вы заходите на сайт?</legend>
+                <select id="visits">
+                    <option value="every_day" selected>Почти каждый день</option>
+                    <option value="few_days">Раз в несколько дней</option>
+                    <option value="few_weeks">Раз в несколько недель</option>
+                    <option value="few_times_year">Несколько раз в год</option>
+                </select>
+            </fieldset>
+            <fieldset class="radio-buttons">
+                <legend class="legend">Вы подписаны на e-mail рассылку?</legend>
+                <input type="radio" id="yes" value="yes" name="subscription" checked>
+                <label for="yes">Да</label>
+                <input type="radio"  id="no" value="no" name="subscription">
+                <label for="no">Нет</label>
+            </fieldset>
+            <fieldset>
+                <legend class="legend">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</legend>
+                <textarea placeholder="Может, больше рецептов?"></textarea>
+            </fieldset>
+            <input class="btn popup_button" type="submit" value="Отправить">
+        </form>
+    </div>
     <header class="blog-header">
         <div class="container container-header">
             <nav class="navigation-panel">         
@@ -18,7 +44,7 @@
                     <li><a class="nav-link" href="#">Посты</a></li>
                     <li><a class="nav-link" href="#">Статьи</a></li>
                     <li><a class="nav-link" href="#">Теги</a></li>
-                    <li><a class="nav-link"  href="#">Темы</a></li>
+                    <li><a class="nav-link" href="#">Темы</a></li>
                     <li><a class="nav-link" href="#">Контакты</a></li>
                 </ul>
                 <div class="menu-btn">
@@ -92,7 +118,7 @@
                 </div>
             </article>
             <article class="post">
-                <img src="images/last-post2.jpg" alt="girl making yoga"> 
+                <img class="post-illustration-image" src="images/last-post2.jpg" alt="girl making yoga"> 
                 <div class="post-article">
                     <ul class="post-tags-list">
                         <li> <a href="#" class="post-tag">Health</a></li>
@@ -107,7 +133,7 @@
                 </div>
             </article>
             <article class="post">
-                <img src="images/last-post3.jpg" alt="girl having fun">
+                <img class="post-illustration-image" src="images/last-post3.jpg" alt="girl having fun">
                 <div class="post-article">
                     <ul class="post-tags-list">
                         <li><a href="#" class="post-tag">Music</a></li>
@@ -122,7 +148,7 @@
                 </div>
             </article>
             <article class="post">
-                <img src="images/last-post4.jpg" alt="breakfast on the table">
+                <img class="post-illustration-image" src="images/last-post4.jpg" alt="breakfast on the table">
                 <div class="post-article">
                     <ul class="post-tags-list">
                         <li><a href="#" class="post-tag">Lyfestyle</a></li>
@@ -137,7 +163,7 @@
                 </div>
             </article>
             <article class="post">
-                <img src="images/last-post5.jpg" alt="pillow with text on it: 'hang out spot'">
+                <img class="post-illustration-image" src="images/last-post5.jpg" alt="pillow with text on it: 'hang out spot'">
                 <div class="post-article">
                     <ul class="post-tags-list">
                         <li><a href="#" class="post-tag">Lifestyle</a></li>
@@ -326,6 +352,7 @@
                 </p>
             </section>
         </div>
-    </footer>    
+    </footer>   
+
 </body>
 </html>
