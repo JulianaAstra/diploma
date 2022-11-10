@@ -20,8 +20,9 @@
 }
 
 body {
-    width: 1660px;
-    /* min-width: 1300px; */
+    width: 100%;
+    max-width: 1660px;
+    min-width: 1201px;
     margin: 0 auto;
     font-family: "Open Sans", sans-serif;
 }
@@ -30,7 +31,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
-    max-width: 1170px;
+    max-width: 1201px;
+    min-width: 1170px;
     padding: 0 15px;
 }
 
@@ -40,6 +42,7 @@ body {
 
 .blog-header {
     width: 100%;
+    /* min-width: px; */
     background-color: #666666;
     background-image: url("../images/banner-bg.jpg");
     background-size: cover;
@@ -73,6 +76,10 @@ body {
     align-items: center;
     gap: 35px;
     z-index: 10;
+}
+
+.menu-btn {
+    display: none;
 }
 
 li {
@@ -112,6 +119,7 @@ li {
 
 .trends {
     width: 100%;
+    max-width: 1660px;
     margin-bottom: 64px;
 }
 
@@ -236,7 +244,6 @@ li {
 .main-info {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 60px;
 }
 
@@ -251,7 +258,7 @@ li {
 .post-article {
     position: relative;
     top: -15px;
-    width: 365px;
+    min-width: 365px;
 }
 
 .post-tags-list {
@@ -572,6 +579,7 @@ input[type="submit"]:hover {
 .container-shop {
     margin-bottom: 95px;
 }
+
 .shop-items-container {
     display: flex;
     justify-content: space-around;
@@ -581,14 +589,14 @@ input[type="submit"]:hover {
 .shop-item {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 290px;
     justify-content: space-between;
 }
 
 .shop-item-info {
     padding: 10px 0 20px 0;
     outline: 3px solid #b59f5b;
-    outline-offset: 25px;
+    outline-offset: 22px;
     padding: 0;
     flex-grow: 1;
 }
@@ -615,6 +623,7 @@ input[type="submit"]:hover {
     text-decoration: none;
     color: #b59f5b;
 }
+
 .shop-item-info a:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -717,3 +726,90 @@ input[type="submit"]:hover {
   clip: rect(0 0 0 0);
   overflow: hidden;
 } 
+
+
+/******************************/
+/*MEDIA QUERIES*/
+/*****************************/
+
+/***** 768PX *****/
+
+
+@media (min-width: 760px) and (max-width: 770px) {
+
+    body {
+        min-width: 640px;
+    }
+
+    .container {
+        min-width: 640px;
+        padding: 0 35px 0 35px;
+        box-sizing: border-box;
+    }
+
+    .container-header {
+        padding-top: 45px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+        width: 23px;
+        height: 20px;
+        align-self: center;
+    }
+
+    .menu-btn:hover {
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        width: 100%;
+        height: 1px;
+        border-bottom: 3px solid #ffffff; 
+    }
+
+    .logo {
+        width: 157px;
+    }
+
+    .title {
+        width: 610px;
+        font-size: 40px;
+        line-height: 55px;
+    }
+    
+    .blog-header {
+        background-position: center;
+    }
+    .trends-container {
+        flex-wrap: wrap;
+    }
+
+    .trends-post {
+        box-sizing: border-box;
+        width: 49.67%;
+        min-height: 245px;
+        font-size: 17px;
+    }
+    
+    .post {
+        box-sizing: border-box;
+        flex-direction: column;
+        margin-right: 35px;
+    }
+
+    .shop-items-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .shop-item-info h2 {
+        font-size: 17px;
+    }
+}
