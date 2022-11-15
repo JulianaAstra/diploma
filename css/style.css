@@ -933,6 +933,20 @@ input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+
+.popup::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 212px;
+    right: 17px;
+    width: 19px;
+    height: 19px;
+    background-image: url("../svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
   
   .popup-content {
     display: flex;
@@ -940,7 +954,7 @@ input[type="submit"]:hover {
     margin-top: 240px;
     background-color: #ffffff;
     width: 390px;
-    padding: 50px 20px;
+    padding: 46px 30px 55px;
     box-sizing: border-box;
     z-index: 2; 
     color: #000000;
@@ -960,30 +974,40 @@ input[type="submit"]:hover {
   .popup-title::after {
     content: '';
     width: 66px;
+    height: 2px;
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 27px;
+    margin-top: 6px;
+    margin-bottom: 25px;
     text-align: center;
     border-bottom: 3px solid #b59f5b;   
   }
   
   .legend {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     font-weight: 400;
+    padding-right: 10px;
   }
-  
+
   select {
     height: 48px;
     background-color: #f4f7f6;
     border: none;
     appearance: none;
-    padding-left: 10px;
+    padding-left: 18px;
     padding-right: 25px;
-    background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/city-select/img/select-arrows.svg);
+    line-height: 10px;
+    background-image: url(../svg/form-arrows.svg);
     background-repeat: no-repeat;
-    background-position: right 5px center;
+    background-position: right 12px center;
+    background-size: 10px;
     color: #707171;
+  }
+
+  select:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0px 1px 0 #E9E5D4;
   }
   
   label[for="visits"] {
@@ -995,7 +1019,7 @@ input[type="submit"]:hover {
     padding: 0;
     border: none;
     width: 100%;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     font-size: 13px;
   }
   
@@ -1006,12 +1030,18 @@ input[type="submit"]:hover {
   textarea {
     background-color: #f4f7f6;
     border: none;
-    padding: 23px 20px;
+    padding: 17px 20px;
     box-sizing: border-box;
     min-height: 130px;
     resize: none;
+    margin-bottom: -9px;
   }
   
+  textarea::placeholder {
+    font-size: "Open Sans";
+    font-weight: 400;
+  }
+
   .popup_button {
     height: 48px;
     background-color: #b59f5b;
@@ -1021,4 +1051,41 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
+  }
+
+  input[type="radio"] {
+    display: none;
+    /* margin: 0;
+    padding: 0; */
+  }
+
+  .radio-answer {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .radio-answer::before {
+    content: '';
+    display: inline-block;    
+    /* position: relative; */
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+    background-image: url("../svg/form-empty-circle.svg");
+    background-repeat: no-repeat;
+    /* background-position: top 1px; */
+    background-size: contain;
+
+  }
+
+  input[type="radio"]:checked +
+  .radio-answer::before {
+    background-image: url("../svg/form-circle.svg")
+  }
+
+  .radio-buttons {
+    margin-bottom: 25px;
   }
