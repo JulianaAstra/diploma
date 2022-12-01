@@ -902,12 +902,21 @@ input[type="radio"]:checked +
     .container {
         min-width: 1170px;
     }
+    .logo-mobile {
+        display: none;
+    }
+    .popup._hidden { 
+        display: none;
+    }
 }
 
 /***** 768PX *****/
 
 
 @media (orientation: portrait) and (min-width: 641px) and (max-width: 1199px) {
+    .logo-mobile {
+        display: none;
+    }
 
     body {
         min-width: 640px;
@@ -1007,6 +1016,10 @@ input[type="radio"]:checked +
 
     .shop-item:last-child {
         margin-right: 53%;
+    }
+
+    .popup._hidden { 
+        display: none;
     }
 
     .popup::after {
@@ -1197,6 +1210,10 @@ input[type="radio"]:checked +
         margin-right: 53%;
     }
 
+    .popup._hidden { 
+        display: none;
+    }
+
     .popup::after {
         top: 210px;
         right: 23px;
@@ -1358,71 +1375,8 @@ input[type="radio"]:checked +
        width: 100px;
     }
 
-    .popup::after {
-        top: 210px;
-        right: 23px;
-        width: 23px;
-        height: 23px;
-    } 
-
-    .radio-answer::before {
-        width: 23px;
-        height: 23px;
-    }
-}
-/*     
-    .blog-header {
-        background-position: center;
-    }
-
-    .trends-container {
-        flex-wrap: wrap;
-    }
-
-    .trends-post {
-        box-sizing: border-box;
-        width: 100%;
-        /* min-width: 24%; 
-        min-height: 245px;
-        font-size: 17px;
-    } 
-*/
-/*  
-    .trends-post-title {
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    .post {
-        box-sizing: border-box;
-        flex-direction: column;
-        margin-right: 15px;
-    }
-
-    .post-article {
-        min-width: 280px;
-    }
-
-    .post-illustration-image {
-        width: 100%;
-    }
-
-    .shop-items-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .shop-item-info h2 {
-        font-size: 17px;
-    }
-
-    .shop-item {
-        max-width: 250px;
-        min-width: 44%;
-    }
-
-    .shop-item:last-child {
-        margin-right: 53%;
+    .popup._hidden { 
+        display: none;
     }
 
     .popup::after {
@@ -1437,7 +1391,3 @@ input[type="radio"]:checked +
         height: 23px;
     }
 }
-
-*/
-
-
